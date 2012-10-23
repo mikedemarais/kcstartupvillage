@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kansas City Startup Village</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true&.js"></script>
+	<script src="js/gmaps.js"></script>
+	<script>
+	jQuery().ready(function($){
+		map = new GMaps({
+  			div: '#map',
+  			lat: 39.046369,
+  			lng: -94.60748,
+  			hideInfoWindows: true
+		});
+		$('#logolink').mousedown(function(){
+          $('.logo').css("margin-top", "-8px", "imporant");
+         });
+         $('#logolink').mouseup(function(){
+          $('.logo').css("margin-top", "-10px", "imporant");
+         });
+	});
+
+	</script>
+</head>
+<body>
+	<header id="header">
+		<a id="logolink" href="#">
+			<div class="logo">
+			</div>
+		</a>
+	</header>
+	<div class="map-container">
+		<div id="map-shadow">
+		</div>
+		<div id="map-text">
+			<h1>KC Startup Village is the physical starting point for the congregation and development of Kansas Citys startup community.</h1>  
+			<p>Like-minded startups are encouraged to join the movement and help build the community by locating (or relocating) their business to the heart of the KCSV project: Hanover Heights.</p>
+		</div>
+		<div id="map">
+		</div>
+	</div>
+	
+</body>
+<html>
